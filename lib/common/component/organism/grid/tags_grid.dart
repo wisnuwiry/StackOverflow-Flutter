@@ -21,6 +21,7 @@ class TagsGrid extends StatelessWidget {
       shrinkWrap: true,
       itemCount: count ?? 6,
       physics: BouncingScrollPhysics(),
+      padding: EdgeInsets.all(0),
       gridDelegate: SliverStaggeredGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: (Dimens.width(context) ~/ Dimens.minTagWidthSize) < 1
             ? 1
