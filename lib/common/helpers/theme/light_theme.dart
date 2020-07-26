@@ -65,6 +65,7 @@ class LightTheme {
   static AppBarTheme appBar = AppBarTheme(
       color: AppColors.backgroundLightColor,
       elevation: 0,
+      brightness: Brightness.light,
       textTheme: text.copyWith(
           headline5: text.headline5.copyWith(color: AppColors.textLightColor)),
       iconTheme: IconThemeData(
