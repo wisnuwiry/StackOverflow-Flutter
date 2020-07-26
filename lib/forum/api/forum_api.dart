@@ -1,0 +1,4 @@
+/// Base API
+class ForumApi{
+  
+}
