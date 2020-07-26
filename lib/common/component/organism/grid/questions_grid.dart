@@ -20,6 +20,7 @@ class QuestionsGrid extends StatelessWidget {
       shrinkWrap: true,
       itemCount: count ?? 6,
       physics: BouncingScrollPhysics(),
+      padding: EdgeInsets.all(0),
       gridDelegate: SliverStaggeredGridDelegateWithFixedCrossAxisCount(
         crossAxisCount:
             (Dimens.width(context) ~/ Dimens.minQuestionWidthSize) < 1
