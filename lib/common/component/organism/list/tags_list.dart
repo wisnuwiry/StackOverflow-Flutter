@@ -8,7 +8,7 @@ class TagsList extends StatelessWidget {
   ///
   final int count;
 
-  /// Default padding only in horizontal 
+  /// Default padding only in horizontal
   /// `EdgeInsets.symmetric(horizontal: Dimens.horizontalPadding)`
   final EdgeInsets padding;
 
@@ -17,18 +17,20 @@ class TagsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: Dimens.heightTagsList,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        shrinkWrap: true,
-        physics: BouncingScrollPhysics(),
-        padding: padding ??
-            EdgeInsets.symmetric(horizontal: Dimens.horizontalPadding),
-        itemBuilder: (_, i) {
-          return TagCard();
-        },
-        itemCount: count ?? 6,
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      physics: BouncingScrollPhysics(),
+      padding:
+          padding ?? EdgeInsets.symmetric(horizontal: Dimens.horizontalPadding),
+      child: Row(
+        children: [
+          TagCard(),
+          TagCard(),
+          TagCard(),
+          TagCard(),
+          TagCard(),
+          TagCard(),
+        ],
       ),
     );
   }
