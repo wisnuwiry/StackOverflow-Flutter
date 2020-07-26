@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import '../../../common.dart';
 import '../../component.dart';
@@ -16,19 +17,21 @@ class UsersList extends StatelessWidget {
   const UsersList({Key key, this.count, this.padding}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: Dimens.heightUsersList,
-      child: ListView.builder(
-        physics: BouncingScrollPhysics(),
-        shrinkWrap: true,
-        scrollDirection: Axis.horizontal,
+    return SingleChildScrollView(
         padding: padding ??
             EdgeInsets.symmetric(horizontal: Dimens.horizontalPadding),
-        itemBuilder: (_, i) {
-          return UserCard();
-        },
-        itemCount: count ?? 4,
-      ),
-    );
+        physics: BouncingScrollPhysics(),
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            UserCard(),
+            UserCard(),
+            UserCard(),
+            UserCard(),
+            UserCard(),
+            UserCard(),
+            UserCard()
+          ],
+        ));
   }
 }
