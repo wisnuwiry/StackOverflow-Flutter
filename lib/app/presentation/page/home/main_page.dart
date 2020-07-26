@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cubit/flutter_cubit.dart';
 
-import '../../../common/common.dart';
-import '../presentation.dart';
+import '../../../../common/common.dart';
+import '../../presentation.dart';
 
 class MainPage extends StatelessWidget {
   @override

@@ -3,7 +3,7 @@ import 'package:get_it/get_it.dart';
 // import 'package:hive/hive.dart';
 
 import 'common/common.dart';
-import 'forum/infrastructure/infrastructure.dart';
+import 'app/infrastructure/infrastructure.dart';
 
 final serviceLocator = GetIt.instance;
 

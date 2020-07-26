@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../common/common.dart';
+import '../../../../common/common.dart';
 
 class DetailQuestionPage extends StatefulWidget {
   @override

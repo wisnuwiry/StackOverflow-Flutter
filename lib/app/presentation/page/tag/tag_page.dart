@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../common/common.dart';
+import '../../../../common/common.dart';
 
-class QuestionPage extends StatefulWidget {
+class TagPage extends StatefulWidget {
   @override
-  _QuestionPageState createState() => _QuestionPageState();
+  _TagPageState createState() => _TagPageState();
 }
 
-class _QuestionPageState extends State<QuestionPage> {
+class _TagPageState extends State<TagPage> {
   int _groupValueSliding = 0;
 
   List<String> _listSlidingData = ['First', 'Second', 'Thrid'];
@@ -24,8 +24,8 @@ class _QuestionPageState extends State<QuestionPage> {
           sliver: SliverList(
               delegate: SliverChildListDelegate([
             _buildSliding(),
-            SizedBox(height: Dimens.dp24),
-            _buildListQuestion(),
+            SizedBox(height: Dimens.dp16),
+            _buildListTags(),
           ])),
         ),
       ],
@@ -36,10 +36,11 @@ class _QuestionPageState extends State<QuestionPage> {
     return SliverAppBar(
       automaticallyImplyLeading: false,
       floating: true,
+      primary: true,
       expandedHeight: 60,
       elevation: 0,
       flexibleSpace: Container(
-        height: 60,
+        height: 80,
         padding:
             const EdgeInsets.symmetric(horizontal: Dimens.horizontalPadding),
         child: Column(
@@ -84,7 +85,7 @@ class _QuestionPageState extends State<QuestionPage> {
     );
   }
 
-  Widget _buildListQuestion() {
-    return QuestionsGrid();
+  Widget _buildListTags() {
+    return TagsGrid();
   }
 }

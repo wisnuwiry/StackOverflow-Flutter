@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../forum/presentation/presentation.dart';
+import '../../app/presentation/presentation.dart';
 
 /// Routes generate in app
 class Routes {

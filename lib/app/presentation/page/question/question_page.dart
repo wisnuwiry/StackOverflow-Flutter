@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../common/common.dart';
+import '../../../../common/common.dart';
 
-class TagPage extends StatefulWidget {
+class QuestionPage extends StatefulWidget {
   @override
-  _TagPageState createState() => _TagPageState();
+  _QuestionPageState createState() => _QuestionPageState();
 }
 
-class _TagPageState extends State<TagPage> {
+class _QuestionPageState extends State<QuestionPage> {
   int _groupValueSliding = 0;
 
   List<String> _listSlidingData = ['First', 'Second', 'Thrid'];
@@ -24,8 +24,8 @@ class _TagPageState extends State<TagPage> {
           sliver: SliverList(
               delegate: SliverChildListDelegate([
             _buildSliding(),
-            SizedBox(height: Dimens.dp24),
-            _buildListTags(),
+            SizedBox(height: Dimens.dp16),
+            _buildListQuestion(),
           ])),
         ),
       ],
@@ -36,10 +36,11 @@ class _TagPageState extends State<TagPage> {
     return SliverAppBar(
       automaticallyImplyLeading: false,
       floating: true,
+      primary: true,
       expandedHeight: 60,
       elevation: 0,
       flexibleSpace: Container(
-        height: 60,
+        height: 80,
         padding:
             const EdgeInsets.symmetric(horizontal: Dimens.horizontalPadding),
         child: Column(
@@ -48,14 +49,7 @@ class _TagPageState extends State<TagPage> {
             Spacer(),
             SearchBar(
               withFilter: true,
-              onFilterPressed: () {
-                showModalBottomSheet(
-                    context: context,
-                    shape: RoundedRectangleBorder(),
-                    builder: (_) => BaseContentSheet(
-                          child: Expanded(child: Text('Helloe WOrld')),
-                        ));
-              },
+              onFilterPressed: () {},
             ),
           ],
         ),
@@ -91,7 +85,8 @@ class _TagPageState extends State<TagPage> {
     );
   }
 
-  Widget _buildListTags() {
-    return TagsGrid();
+  Widget _buildListQuestion() {
+    return QuestionsGrid(
+    );
   }
 }

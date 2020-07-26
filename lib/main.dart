@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'common/common.dart';
-import 'forum/presentation/page/main_page.dart';
+import 'app/presentation/page/home/main_page.dart';
 import 'generated/l10n.dart';
 
 void main() {
@@ -18,9 +18,10 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // This make status bar overlay to transparent 
-    SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    // This make status bar overlay to transparent
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Theme.of(context).brightness));
 
     return MaterialApp(
       supportedLocales: S.delegate.supportedLocales,

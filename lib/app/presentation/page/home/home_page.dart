@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cubit/flutter_cubit.dart';
 
-import '../../../common/common.dart';
-import '../cubit/cubit.dart';
+import '../../../../common/common.dart';
+import '../../cubit/cubit.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -37,12 +37,13 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.only(
               left: Dimens.horizontalPadding,
               right: Dimens.horizontalPadding,
-              top: 40),
+              top: 60),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   HeadingText('StackOverflow'),
                   SizedBox(height: Dimens.dp4),
